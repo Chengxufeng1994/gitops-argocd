@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+
+kind: Application
+metadata:
+  name: application-project-role
+spec:
+  destination:
+    namespace: prod 
+    server: https://kubernetes.default.svc
+  project: project-role
+  source:
+    path: v03/helm/nginx
+    targetRevision: main
+    repoURL: https://github.com/chengxufeng1994/gitops-argocd.git

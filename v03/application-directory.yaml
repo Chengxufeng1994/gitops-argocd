@@ -15,3 +15,9 @@ spec:
     path: v03/directoryOfmanifests
     repoURL: https://github.com/chengxufeng1994/gitops-argocd.git
     targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
